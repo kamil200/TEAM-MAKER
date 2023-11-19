@@ -223,9 +223,9 @@ const UserList = () => {
       <TopBar>
       <TeamButton
           onClick={handleCreateTeam}
-          disabled={selectedUsers.length === 0}
+      
         >
-          + Create New Team
+          + Make New Team
         </TeamButton>
 
         <SearchBarWithFilters
@@ -239,6 +239,8 @@ const UserList = () => {
         {selectedUsers.length > 0 && (
           <ClearButton onClick={handleClear}>Clear All</ClearButton>
         )}
+       
+      
       </TopBar>
       <div>
         <UserTable>
