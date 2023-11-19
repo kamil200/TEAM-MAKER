@@ -10,6 +10,7 @@ import SearchBarWithFilters from "../components/SearchBarWithFilters";
 import CreateNewTeam from "../components/CreateNewTeam";
 
 const Container = styled.div`
+  
   padding: 20px 30px;
   padding-bottom: 200px;
   height: 100%;
@@ -220,18 +221,20 @@ const UserList = () => {
   return (
     <Container>
       <TopBar>
+      <TeamButton
+          onClick={handleCreateTeam}
+          disabled={selectedUsers.length === 0}
+        >
+          + Create New Team
+        </TeamButton>
+
         <SearchBarWithFilters
           onSearch={handleSearch}
           onFilter={handleFilter}
           filters={filters}
         />
 
-        <TeamButton
-          onClick={handleCreateTeam}
-          disabled={selectedUsers.length === 0}
-        >
-          + Create New Team
-        </TeamButton>
+       
 
         {selectedUsers.length > 0 && (
           <ClearButton onClick={handleClear}>Clear All</ClearButton>

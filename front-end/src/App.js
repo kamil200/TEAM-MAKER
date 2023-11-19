@@ -62,9 +62,11 @@ function App() {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Container>
         <BrowserRouter>
-          {menuOpen && <Menu setMenuOpen={setMenuOpen} />}
+          
           <Wrapper>
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          {menuOpen && <Menu setMenuOpen={setMenuOpen} />}
+          
+         
             <Routes>
               <Route path="/" element={<UserList />} />
               <Route path="/teams" element={<TeamsList />} />

@@ -28,22 +28,13 @@ const Container = styled.div`
     transition: 0.3s ease-in-out;
   }
 `;
-const ContainerWrapper = styled.div`
-  height: 100%;
-  width: 100%;
+
+const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-`;
-const Space = styled.div`
-  height: 50px;
-`;
-const Flex = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 24px 24px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px;
 `;
 
 const LogoText = styled(Link)`
@@ -54,7 +45,7 @@ const LogoText = styled(Link)`
   text-transform: uppercase;
   background: linear-gradient(
     225deg,
-    rgb(100,100, 100) 0%,
+    rgb(72, 249, 85) 0%,
     rgb(72, 249, 85) 100%
   );
   -webkit-background-clip: text;
@@ -66,11 +57,9 @@ const LogoText = styled(Link)`
   }
 `;
 
-const Close = styled.div`
-  display: none;
-  @media (max-width: 1100px) {
-    display: block;
-  }
+const MenuItems = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const NavLinkItem = styled(NavLink)`
@@ -89,7 +78,7 @@ const NavLinkItem = styled(NavLink)`
   }
   &.active {
     background-color: ${({ theme }) => theme.primary + 10};
-    color: ${({ theme }) => theme.primary} ;
+    color: ${({ theme }) => theme.primary};
     font-weight: 500;
   }
 
@@ -97,6 +86,23 @@ const NavLinkItem = styled(NavLink)`
     padding: 20px 16px;
     font-size: 16px;
   }
+`;
+
+const Hr = styled.div`
+  height: 1px;
+  margin: 15px 0px 15px 0px;
+  background: ${({ theme }) => theme.menu_secondary_text + 30};
+`;
+
+const Close = styled.div`
+  display: none;
+  @media (max-width: 1100px) {
+    display: block;
+  }
+`;
+
+const Space = styled.div`
+  height: 50px;
 `;
 
 const Item = styled.div`
@@ -120,20 +126,20 @@ const Item = styled.div`
   }
 `;
 
-const Hr = styled.div`
-  height: 1px;
-  margin: 15px 0px 15px 0px;
-  background: ${({ theme }) => theme.menu_secondary_text + 30};
+const Flex = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px;
 `;
 
-const Title = styled.div`
-  font-size: 18px;
-  color: ${({ theme }) => theme.menu_primary_text};
-  margin-bottom: 12px;
-  padding: 2px 26px;
+const ContainerWrapper = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 4px;
 `;
 
 const Menu = ({ setMenuOpen }) => {
@@ -143,43 +149,42 @@ const Menu = ({ setMenuOpen }) => {
 
   return (
     <Container setMenuOpen={setMenuOpen}>
-      <Flex>
+      <Header>
         <LogoText to="/">Heliverse</LogoText>
+        <MenuItems>
+          <NavLinkItem
+            to="/"
+            index
+            exact
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <PersonRounded sx={{ fontSize: "26px" }} />
+            Users
+          </NavLinkItem>
+          <NavLinkItem
+            to="/teams"
+            index
+            exact
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <GroupRounded sx={{ fontSize: "26px" }} />
+            Teams
+          </NavLinkItem>
+          <Hr />
+          <Item onClick={() => dispatch(setDarkMode(!darkMode))}>
+            {darkMode ? (
+              <LightModeRounded sx={{ fontSize: "26px" }} />
+            ) : (
+              <DarkModeRounded sx={{ fontSize: "26px" }} />
+            )}
+            {darkMode ? "Light" : "Dark"} Mode
+          </Item>
+        </MenuItems>
         <Close>
           <CloseRounded onClick={() => setMenuOpen(false)} />
         </Close>
-      </Flex>
-      <ContainerWrapper>
-        <NavLinkItem
-          to="/"
-          index
-          exact
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <PersonRounded sx={{ fontSize: "26px" }} />
-          Users
-        </NavLinkItem>
-        <NavLinkItem
-          to="/teams"
-          index
-          exact
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <GroupRounded sx={{ fontSize: "26px" }} />
-          Teams
-        </NavLinkItem>
-        <Hr />
-        <Title>Settings</Title>
-        <Item onClick={() => dispatch(setDarkMode(!darkMode))}>
-          {darkMode ? (
-            <LightModeRounded sx={{ fontSize: "26px" }} />
-          ) : (
-            <DarkModeRounded sx={{ fontSize: "26px" }} />
-          )}
-          {darkMode ? "Light" : "Dark"} Mode
-        </Item>
-        <Space />
-      </ContainerWrapper>
+      </Header>
+      <Space />
     </Container>
   );
 };
