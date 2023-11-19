@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "heliverse-assignment-x556-91pribrmw-kamil200.vercel.app",
+  baseURL: "https://kamil-patel.onrender.com/api/",
 });
 
 export const getUsers = async ({
