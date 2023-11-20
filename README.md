@@ -18,18 +18,18 @@ This task demonstrates the functionality of a user interface built with Angular,
 
 
 
-GET /api/users:
-GET /api/users/:id: 
+GET /api/users: https://kamil-patel.onrender.com/api/users/
+GET /api/users/id: 
 POST /api/users:
-PUT /api/users/:id: 
-DELETE /api/users/:id: 
+PUT /api/users/id: 
+DELETE /api/users/id: 
 
-POST /api/team: 
+GET /api/team: https://kamil-patel.onrender.com/api/team/
 GET /api/team/:id: 
 
 # Deliverables
 frontend : 
-backend : https://kamil-patel.onrender.com/api/users/
+backend : https://kamil-patel.onrender.com
 
  If you encounter any issues or have suggestions, kindly let me know.
  🚀✨
