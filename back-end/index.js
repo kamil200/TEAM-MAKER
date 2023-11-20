@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/extensions */
+
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -18,7 +17,7 @@ const corsConfig = {
   origin: true,
 };
 app.use(cors(corsConfig));
-app.use(morgan("tiny"));
+
 
 const port = process.env.PORT || 5000;
 

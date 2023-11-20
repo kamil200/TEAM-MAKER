@@ -26,6 +26,8 @@ const Container = styled.div`
     max-width: 300px;
     left: ${({ setMenuOpen }) => (setMenuOpen ? "0" : "-100%")};
     transition: 0.3s ease-in-out;
+    flex-direction: column; 
+    
   }
 `;
 
@@ -60,7 +62,12 @@ const LogoText = styled(Link)`
 const MenuItems = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 1100px) {
+    flex-direction: column; /* Change back to row layout for larger screens */
+     /* Reset the margin */
+  }
 `;
+
 
 const NavLinkItem = styled(NavLink)`
   display: flex;
@@ -85,6 +92,7 @@ const NavLinkItem = styled(NavLink)`
   @media (max-width: 768px) {
     padding: 20px 16px;
     font-size: 16px;
+    display: none;
   }
 `;
 
@@ -123,6 +131,7 @@ const Item = styled.div`
   @media (max-width: 768px) {
     padding: 20px 16px;
     font-size: 16px;
+    display: none;
   }
 `;
 

@@ -45,7 +45,7 @@ const LogoText = styled(Link)`
   text-transform: uppercase;
   background: linear-gradient(
     225deg,
-    rgb(132, 0, 255) 0%,
+    rgb(72, 249, 85) 0%,
     rgb(72, 249, 85)100%
   );
   -webkit-background-clip: text;
@@ -72,14 +72,14 @@ const Navbar = ({ setMenuOpen, menuOpen }) => {
   if (path === "") path = "";
   else if (path === "teams") path = "";
   else path = "";
-
+//<Path>{path}</Path>
   return (
     <Container>
       <Flex>
         <MenuIcon onClick={() => setMenuOpen(!menuOpen)}>
           <MenuRounded sx={{ fontSize: "30px" }} />
         </MenuIcon>
-        <Path>{path}</Path>
+        
         <LogoText to="/">USER MANAGEMENT</LogoText>
       </Flex>
     </Container>

@@ -64,6 +64,7 @@ function App() {
         <BrowserRouter>
           
           <Wrapper>
+         
           {menuOpen && <Menu setMenuOpen={setMenuOpen} />}
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
          
