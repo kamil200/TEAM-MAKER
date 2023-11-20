@@ -7,7 +7,16 @@ This task demonstrates the functionality of a user interface built with Angular,
 
 # Backend:
 
-
+### API Endpoints
+| HTTP Verbs | Endpoints | Action |
+| --- | --- | --- |
+| GET | /api/users/ | To sign up a new user account |
+| GET | /api/users/_id | To login an existing user account |
+| POST | /api/users/ | To create a new cause |
+| PUT | /api/users/id | To retrieve all causes on the platform |
+| DELETE | /api/users/id | To retrieve details of a single cause |
+| GET | /api/team: | To edit the details of a single cause |
+| GET | /api/team/:id | To delete a single cause |
 
 GET /api/users: 
 This API endpoint is used to retrieve a list of users. It sends an HTTP GET request to the specified URL: https://kamil-patel.onrender.com/api/users/.
@@ -39,13 +48,6 @@ Status: 200 OK
     "totalUsers": 0
 }
 
-GET /api/users/id: 
-POST /api/users:
-PUT /api/users/id: 
-DELETE /api/users/id: 
-
-GET /api/team: https://kamil-patel.onrender.com/api/team/
-GET /api/team/:id: 
 
 # Deliverables
 frontend : https://heliverse-assignment-3x5q5x0n8-kamil200.vercel.app
