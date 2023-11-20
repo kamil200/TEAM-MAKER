@@ -3,11 +3,11 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { getUsers } from "../api";
 import { openSnackbar } from "../redux/reducers/snackbarSlice";
-import UserCard from "../components/Cards/UserCard";
-import Loader from "../components/Loader";
-import PaginationBar from "../components/PaginationBar";
-import SearchBarWithFilters from "../components/SearchBarWithFilters";
-import CreateNewTeam from "../components/CreateNewTeam";
+import UserCard from "./UserCard";
+import Loader from "./Loader";
+import PaginationBar from "./PaginationBar";
+import SearchBarWithFilters from "./SearchBarWithFilters";
+import CreateNewTeam from "./CreateNewTeam";
 
 const Container = styled.div`
   
@@ -111,15 +111,16 @@ const TopBar = styled.div`
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content :center;
 `;
 
 const TeamButton = styled.button`
-  background: ${({ theme }) => theme.primary};
-  color: white;
-  border: none;
+  background: black; /* Set the background color to black */
+  color: ${({ theme }) => theme.primary}; /* Set the font color to the primary color */
+  border: 2px solid ${({ theme }) => theme.primary}; /* Set the border to the primary color */
   padding: 10px 20px;
   height: 48px;
-  border-radius: 4px;
+  border-radius: 10%;
   font-size: 16px;
   cursor: pointer;
 
@@ -127,11 +128,13 @@ const TeamButton = styled.button`
     background: ${({ theme }) => theme.text_secondary};
     cursor: not-allowed;
   }
+
   @media (max-width: 600px) {
     font-size: 14px;
     padding: 4px 14px;
   }
 `;
+
 
 const ClearButton = styled.button`
   background: ${({ theme }) => theme.text_secondary + 10};
@@ -166,7 +169,7 @@ const UserList = () => {
   const handleFilter = (newFilters) => {
     setFilters(newFilters);
   };
-
+  
   const toggleUserSelection = (userId) => {
     if (selectedUsers.includes(userId)) {
       setSelectedUsers(selectedUsers.filter((id) => id !== userId));
@@ -223,12 +226,13 @@ const UserList = () => {
       <TopBar>
       <TeamButton
           onClick={handleCreateTeam}
-      
+          disabled={selectedUsers.length === 0}
         >
-          + Make New Team
+          Create Team
         </TeamButton>
 
         <SearchBarWithFilters
+         
           onSearch={handleSearch}
           onFilter={handleFilter}
           filters={filters}
@@ -249,9 +253,11 @@ const UserList = () => {
             <Heading style={{ width: "80%", justifyContent: "start" }}>
               Full Name
             </Heading>
-            <Heading>Gender</Heading>
             <Heading>Domain</Heading>
-            <Heading>Status</Heading>
+            <Heading>Gender</Heading>
+           
+           
+            <Heading  >Select User(s)</Heading>
           </TableTop>
 
           {loading || error ? (

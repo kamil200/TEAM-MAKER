@@ -2,7 +2,7 @@ export const darkTheme = {
   bg: "black",
   bgLight: "#1C1E27",
   bgDark: "#15171E",
-  primary: "#48f955",
+  primary: "#48f959",
   menubar: "#12141c",
   menu_primary_text: "#F2F3F4",
   menu_secondary_text: "#b1b2b3",
@@ -23,12 +23,13 @@ export const darkTheme = {
   work: "#0d72ff",
   meeting: "#ff9500",
   break: "#ff0dae",
+  red:"rgb(52, 131, 235)"
 };
 
 export const lightTheme = {
   bg: "#f9f9f9",
   bgLight: "#FFFFFF",
-  primary: "#854CE6",
+  primary: "#48f959",
   button:
     "linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(72, 249, 85));",
   gradient_primary:

@@ -154,16 +154,9 @@ const UserCard = ({ user, onSelect, selectedUsers, selected }) => {
       onClick={handleCardClick}
       style={{ backgroundColor: selected ? theme.card + 90 : theme.card }}
     >
-      {selectedUsers.length > 0 && (
-        <Checkbox
-          checked={selected}
-          sx={{
-            color: user.available
-              ? theme.text_secondary
-              : theme.text_secondary + 20,
-          }}
-        />
-      )}
+     
+      
+      
 
       <Info style={{ width: "30%" }}>
         <AvatarImage src={user?.avatar}></AvatarImage>
@@ -172,8 +165,10 @@ const UserCard = ({ user, onSelect, selectedUsers, selected }) => {
         {user?.first_name} {user?.last_name}
         <span>{user?.email}</span>
       </Name>
-      <Info>{user?.gender}</Info>
       <Info>{user?.domain}</Info>
+      <Info>{user?.gender}</Info>
+  
+     
       <Info>
         {user?.available ? (
           <Status
@@ -187,14 +182,23 @@ const UserCard = ({ user, onSelect, selectedUsers, selected }) => {
         ) : (
           <Status
             style={{
-              background: `${theme.yellow + 10}`,
-              color: `${theme.yellow}`,
+              background: `${theme.red + 10}`,
+              color: `${theme.red}`,
             }}
           >
             Not Available
           </Status>
         )}
+
       </Info>
+      <Checkbox
+          checked={selected}
+          sx={{
+            color: user.available
+              ? theme.primary
+              : theme.text_secondary + 20,
+          }}
+        />
     </Card>
   );
 };

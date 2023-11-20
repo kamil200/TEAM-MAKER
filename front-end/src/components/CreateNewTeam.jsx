@@ -142,7 +142,7 @@ const CreateTask = ({ setOpenCreateTeam, team_members, setTeamMember }) => {
 
   useEffect(() => {
     // If there is no error message and all the fields are filled, then enable the button
-    if (formData.team_description && formData.team_name) {
+    if ( formData.team_name) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);
@@ -159,7 +159,7 @@ const CreateTask = ({ setOpenCreateTeam, team_members, setTeamMember }) => {
       setButtonDisabled(true);
       createTeam({
         team_name: formData.team_name,
-        team_description: formData.team_description,
+        
         team_members: team_members,
       })
         .then((res) => {
@@ -240,21 +240,8 @@ const CreateTask = ({ setOpenCreateTeam, team_members, setTeamMember }) => {
                 onChange={handleInputChange}
               />
             </OutlinedInput>
-            <OutlinedInput
-              style={{
-                alignItems: "start",
-              }}
-            >
-              <AddTaskRounded />
-              <TextInputArea
-                type="text"
-                placeholder="Team Description"
-                name="team_description"
-                value={formData.team_description}
-                onChange={handleInputChange}
-                rows={3}
-              />
-            </OutlinedInput>
+           
+           
             {
               // Show error message if there is one from the server
               errorMessage?.apierror && (
@@ -270,7 +257,7 @@ const CreateTask = ({ setOpenCreateTeam, team_members, setTeamMember }) => {
               });
               handleSubmit(e);
             }}
-            buttonDisabled={buttonDisabled}
+           
           >
             {loading ? (
               <CircularProgress size={24} color="inherit" />

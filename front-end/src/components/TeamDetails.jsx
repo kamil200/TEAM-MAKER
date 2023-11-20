@@ -80,7 +80,7 @@ const TeamDetails = ({ open, openTeamDetails, setOpenTeamDetails }) => {
       >
         <Container>
           <Title>{team?.team_name}</Title>
-          <TeamDescription>{team?.team_description}</TeamDescription>
+         
           Members
           {team?.team_members?.map((member) => (
             <Member key={member._id}>

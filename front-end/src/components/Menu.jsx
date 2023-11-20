@@ -150,7 +150,7 @@ const Menu = ({ setMenuOpen }) => {
   return (
     <Container setMenuOpen={setMenuOpen}>
       <Header>
-        <LogoText to="/">Heliverse</LogoText>
+        <LogoText to="/">User Management</LogoText>
         <MenuItems>
           <NavLinkItem
             to="/"

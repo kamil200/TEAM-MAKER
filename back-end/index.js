@@ -20,7 +20,7 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.use(morgan("tiny"));
 
-const port = process.env.PORT || 8800;
+const port = process.env.PORT || 5000;
 
 const connect = () => {
   mongoose.set("strictQuery", true);

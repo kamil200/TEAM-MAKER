@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import ToastMessage from "./components/ToastMessage";
-import UserList from "./pages/UserList";
-import TeamsList from "./pages/TeamsList";
+import UserList from "./components/UserList";
+import TeamsList from "./components/TeamsList";
 
 const Container = styled.div`
   width: 100%;

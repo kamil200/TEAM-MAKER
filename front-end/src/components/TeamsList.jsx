@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { getTeams } from "../api";
 import { openSnackbar } from "../redux/reducers/snackbarSlice";
 import Loader from "../components/Loader";
-import TeamCard from "../components/Cards/TeamCard";
-import TeamDetails from "../components/TeamDetails";
+import TeamCard from "./TeamCard";
+import TeamDetails from "./TeamDetails";
 
 const Container = styled.div`
   padding: 20px 30px;
@@ -71,7 +71,6 @@ const TeamList = () => {
         setLoading(true);
         await getTeams().then((res) => {
           console.log(res.data);
-       
           setTeams(res.data);
           setLoading(false);
         });
