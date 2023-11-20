@@ -51,5 +51,9 @@ GET /api/team/:id:
 frontend : 
 backend : https://kamil-patel.onrender.com
 
+
+
+
  If you encounter any issues or have suggestions, kindly let me know.
  🚀✨
+note: aesthetic credits: https://escharts.com/
