@@ -48,7 +48,7 @@ GET /api/team: https://kamil-patel.onrender.com/api/team/
 GET /api/team/:id: 
 
 # Deliverables
-frontend : 
+frontend : https://heliverse-assignment-3x5q5x0n8-kamil200.vercel.app
 backend : https://kamil-patel.onrender.com
 
 
