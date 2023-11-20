@@ -18,7 +18,7 @@ This task demonstrates the functionality of a user interface built with Angular,
 | GET | /api/team: | To edit the details of a single cause |
 | GET | /api/team/:id | To delete a single cause |
 
-GET /api/users: 
+
 This API endpoint is used to retrieve a list of users. It sends an HTTP GET request to the specified URL: https://kamil-patel.onrender.com/api/users/.
 The last execution of this request returned a response with a status code of 200, indicating a successful request. The response body contained an array of user objects, with each object having properties such as _id, id, first_name, last_name, email, gender, avatar, domain, available, and __v. 
 Additionally, the response included information about the pagination of the user list, such as the current page number (currentPage), total number of pages (totalPages), and total number of users (totalUsers).
@@ -26,7 +26,7 @@ Please note that the actual values of the user properties are not provided in th
 To use this endpoint, send an HTTP GET request to the specified URL. No request parameters are required.
 
 Example Response:
-
+```json
 Status: 200 OK
 {
     "users": [
@@ -47,14 +47,17 @@ Status: 200 OK
     "totalPages": 0,
     "totalUsers": 0
 }
-
+```
 
 # Deliverables
-frontend : https://heliverse-assignment-3x5q5x0n8-kamil200.vercel.app
-backend : https://kamil-patel.onrender.com
-
-
-
+Frontend
+```https
+https://heliverse-assignment-orcin.vercel.app
+```
+Backend
+```https
+//kamil-patel.onrender.com
+```
 
  If you encounter any issues or have suggestions, kindly let me know.
  🚀✨
