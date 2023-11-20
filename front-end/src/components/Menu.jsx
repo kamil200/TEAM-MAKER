@@ -177,14 +177,14 @@ const Menu = ({ setMenuOpen }) => {
             ) : (
               <DarkModeRounded sx={{ fontSize: "26px" }} />
             )}
-            {darkMode ? "Light" : "Dark"} Mode
+          
           </Item>
         </MenuItems>
         <Close>
           <CloseRounded onClick={() => setMenuOpen(false)} />
         </Close>
       </Header>
-      <Space />
+  
     </Container>
   );
 };

@@ -79,7 +79,7 @@ const TeamDetails = ({ open, openTeamDetails, setOpenTeamDetails }) => {
         }}
       >
         <Container>
-          <Title>{team?.team_name}</Title>
+          <Title  style={{color:"primary",}}>{team?.team_name}</Title>
          
           Members
           {team?.team_members?.map((member) => (

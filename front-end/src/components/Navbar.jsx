@@ -69,8 +69,8 @@ const Navbar = ({ setMenuOpen, menuOpen }) => {
 
   // get the main path from the location
   let path = location.pathname.split("/")[1];
-  if (path === "") path = "Users";
-  else if (path === "teams") path = "Teams";
+  if (path === "") path = "";
+  else if (path === "teams") path = "";
   else path = "";
 
   return (
@@ -80,7 +80,7 @@ const Navbar = ({ setMenuOpen, menuOpen }) => {
           <MenuRounded sx={{ fontSize: "30px" }} />
         </MenuIcon>
         <Path>{path}</Path>
-        <LogoText to="/">Heliverse</LogoText>
+        <LogoText to="/">USER MANAGEMENT</LogoText>
       </Flex>
     </Container>
   );
