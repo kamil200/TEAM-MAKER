@@ -2,7 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode } from "./redux/reducers/userSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { darkTheme, lightTheme } from "./utils/Themes";
+import { darkTheme, lightTheme } from "./Themes";
 import { useEffect, useState } from "react";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";

@@ -3,7 +3,7 @@ import { createError } from "../error.js";
 
 export const createTeam = async (req, res, next) => {
   try {
-    const { team_name, team_description, team_members } = req.body;
+    const { team_name, team_members } = req.body;
 
     // Ensure team_members contain unique user IDs
     const uniqueMembers = new Set(team_members);
@@ -16,7 +16,7 @@ export const createTeam = async (req, res, next) => {
 
     const newTeam = new Team({
       team_name,
-      team_description,
+      
       team_members,
     });
 

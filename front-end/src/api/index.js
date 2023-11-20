@@ -20,6 +20,5 @@ export const getTeams = async () => await API.get(`/team/`);
 
 export const createTeam = async ({
   team_name,
-  team_description,
   team_members,
-}) => await API.post(`/team/`, { team_name, team_description, team_members });
+}) => await API.post(`/team/`, { team_name, team_members });
