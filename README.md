@@ -6,7 +6,7 @@ This task demonstrates the functionality of a user interface built with MERN, sh
 # Backend:
 
 ### API Endpoints
-| HTTP Verbs | Endpoints | 
+| HTTP Verbs | Endpoints | |
 | --- | --- | --- |
 | GET | /api/users/ |  |
 | GET | /api/users/_id | |
