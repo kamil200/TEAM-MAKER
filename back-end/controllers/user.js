@@ -14,7 +14,7 @@ export const getUsers = async (req, res, next) => {
     const perPage = parseInt(limit);
     const currentPage = parseInt(page);
 
-    // Build a query for searching by user name
+   
     const searchQuery = {};
 
     if (search) {

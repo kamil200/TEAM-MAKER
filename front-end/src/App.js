@@ -66,7 +66,7 @@ function App() {
           <Wrapper>
          
           {menuOpen && <Menu setMenuOpen={setMenuOpen} />}
-          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
          
             <Routes>
               <Route path="/" element={<UserList />} />
