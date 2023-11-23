@@ -1,4 +1,4 @@
-# USER MANAGEMENT - full stack developer 
+# USER MANAGEMENT - MERN stack web application 
 
 ## Overview
 This task demonstrates the functionality of a user interface built with MERN, showcasing a comprehensive feature set using a mock data source. The project renders user information in card format with pagination and implements multiple filters for an enhanced user experience.
